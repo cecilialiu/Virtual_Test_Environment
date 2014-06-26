@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<model>
+    <name>Practice</name>
+    <version>1.0</version>
+    <name>Practice.URDF</name>
+    <description>This is a test version for exporting from Gazebo to Solidworks</description>
+<!--<package>
+  <description brief="Practice">Practice</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>-->
+
+</model>
+
