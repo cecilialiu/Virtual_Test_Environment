@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<robot
+  name="kitchen_gazebo">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.83479229641655 4.84645267903905 2.3939424589638"
+        rpy="0 0 0" />
+      <mass
+        value="24756.9002576438" />
+      <inertia
+        ixx="345381.041736547"
+        ixy="-7441.75636053468"
+        ixz="-1930.9346888494"
+        iyy="228196.721336676"
+        iyz="-3380.0126470379"
+        izz="476181.678322093" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.749019607843137 0.749019607843137 0.749019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="kitchen_counter">
+    <inertial>
+      <origin
+        xyz="2.50931689041543 1.46940566017838 0.54287927837013"
+        rpy="0 0 0" />
+      <mass
+        value="167.482669275965" />
+      <inertia
+        ixx="54.2393970761068"
+        ixy="0.099342414027901"
+        ixz="-0.287034385289535"
+        iyy="15.797549842197"
+        iyz="0.582832371257107"
+        izz="51.4877219057791" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/kitchen_counter.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/kitchen_counter.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="kitchen_counter"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="kitchen_counter" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="drawer_left">
+    <inertial>
+      <origin
+        xyz="2.57310110642472 1.45420000000002 0.741347982329302"
+        rpy="0 0 0" />
+      <mass
+        value="9.47751493301134" />
+      <inertia
+        ixx="0.315267674681906"
+        ixy="-8.67693226187894E-16"
+        ixz="0.000191715380340829"
+        iyy="0.410595971523303"
+        iyz="9.0075248947048E-16"
+        izz="0.656396883249416" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/drawer_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/drawer_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="drawer_left"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="kitchen_counter" />
+    <child
+      link="drawer_left" />
+    <limit effort="1000.0" lower="0" upper="0.55" velocity="0.275" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="drawer_right">
+    <inertial>
+      <origin
+        xyz="2.57310110642474 1.9542 0.741347982329303"
+        rpy="0 0 0" />
+      <mass
+        value="9.4775149330115" />
+      <inertia
+        ixx="0.315267674681916"
+        ixy="-7.83094580319514E-16"
+        ixz="0.000191715380340947"
+        iyy="0.410595971523309"
+        iyz="-6.57404880534236E-16"
+        izz="0.65639688324943" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/drawer_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/drawer_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="drawer_right"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="kitchen_counter" />
+    <child
+      link="drawer_right" />
+    <limit effort="1000.0" lower="0" upper="0.55" velocity="0.275" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="water_pipe">
+    <inertial>
+      <origin
+        xyz="2.39841100330439 0.78772876028331 0.971666803670555"
+        rpy="0 0 0" />
+      <mass
+        value="0.278769423544699" />
+      <inertia
+        ixx="0.00254972636821292"
+        ixy="0.00110850271087319"
+        ixz="0.000513470366159056"
+        iyy="0.00126944006753512"
+        iyz="0.000889276547537839"
+        izz="0.00261412476087191" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/water_pipe.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/water_pipe.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="water_pipe"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="kitchen_counter" />
+    <child
+      link="water_pipe" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="counter_sink">
+    <inertial>
+      <origin
+        xyz="2.5675 0.964200000000004 0.814818333044056"
+        rpy="0 0 0" />
+      <mass
+        value="2.96176611388953" />
+      <inertia
+        ixx="0.0630960188366444"
+        ixy="1.25500557974391E-17"
+        ixz="-3.10998855354148E-17"
+        iyy="0.0500589614821276"
+        iyz="-3.06630122707278E-18"
+        izz="0.101018683191766" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/counter_sink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kitchen_gazebo/meshes/counter_sink.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="counter_sink"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="kitchen_counter" />
+    <child
+      link="counter_sink" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
