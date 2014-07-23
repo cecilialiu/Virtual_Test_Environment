@@ -73,15 +73,15 @@
       <link name='base_link'>
         <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
         <inertial>
-          <pose>2.832570 4.823260 2.381300 0.000000 0.000000 0.000000</pose>
-          <mass>24927.600000</mass>
+          <pose>2.832790 4.836380 2.385820 0.000000 0.000000 0.000000</pose>
+          <mass>24862.500000</mass>
           <inertia>
-            <ixx>345435.000000</ixx>
-            <ixy>-7441.660000</ixy>
-            <ixz>-1931.220000</ixz>
-            <iyy>228213.000000</iyy>
-            <iyz>-3379.430000</iyz>
-            <izz>476233.000000</izz>
+            <ixx>343870.000000</ixx>
+            <ixy>-7565.990000</ixy>
+            <ixz>-1978.630000</ixz>
+            <iyy>227982.000000</iyy>
+            <iyz>-3896.310000</iyz>
+            <izz>474861.000000</izz>
           </inertia>
         </inertial>
         <collision name='base_link_geom'>
@@ -203,14 +203,14 @@
       <link name='drawer_left'>
         <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
         <inertial>
-          <pose>2.573100 1.454200 0.741348 0.000000 0.000000 0.000000</pose>
+          <pose>2.446800 1.637400 0.741348 0.000000 0.000000 0.000000</pose>
           <mass>9.477510</mass>
           <inertia>
             <ixx>0.315268</ixx>
             <ixy>-0.000000</ixy>
             <ixz>0.000192</ixz>
             <iyy>0.410596</iyy>
-            <iyz>0.000000</iyz>
+            <iyz>-0.000000</iyz>
             <izz>0.656397</izz>
           </inertia>
         </inertial>
@@ -258,7 +258,7 @@
             <lower>0.000000</lower>
             <upper>0.550000</upper>
             <effort>1000.000000</effort>
-            <velocity>0.275000</velocity>
+            <velocity>0.500000</velocity>
           </limit>
           <dynamics/>
         </axis>
@@ -266,7 +266,7 @@
       <link name='drawer_right'>
         <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
         <inertial>
-          <pose>2.573100 1.954200 0.741348 0.000000 0.000000 0.000000</pose>
+          <pose>2.446800 2.137400 0.741348 0.000000 0.000000 0.000000</pose>
           <mass>9.477510</mass>
           <inertia>
             <ixx>0.315268</ixx>
@@ -321,7 +321,7 @@
             <lower>0.000000</lower>
             <upper>0.550000</upper>
             <effort>1000.000000</effort>
-            <velocity>0.275000</velocity>
+            <velocity>0.500000</velocity>
           </limit>
           <dynamics/>
         </axis>
@@ -332,7 +332,7 @@
     <state world_name='default'>
       <sim_time>0 0</sim_time>
       <real_time>0 0</real_time>
-      <wall_time>1405979519 198305415</wall_time>
+      <wall_time>1406137415 91584652</wall_time>
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
